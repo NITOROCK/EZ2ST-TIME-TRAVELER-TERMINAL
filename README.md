@@ -69,3 +69,82 @@ CREDIT：
 
 
 ―― 記録は、未来へのログである。そしてログは、未来の自分が越える『壁』になる。
+
+
+
+
+＝＝＝English Ver.　Read me＝＝＝
+
+title:
+EZ2ST - TIME TRAVELER TERMINAL
+
+
+
+concept:
+EZ2ST is not just a score tracker.
+It is a “recording terminal” that captures the moment of your play.
+The excitement of carving your DJ name for the first time in an arcade.
+The nostalgia of local ranking culture.
+Relive those moments once again.
+
+
+
+Overview:
+This tool reads EZ2ON result screens using OCR,
+and allows you to record your player name instantly,
+saving and displaying it as a ranking.
+
+
+
+Features:
+Automatic result scanning via OCR
+Retro digital watch-style UI
+Name entry system to “leave your mark”
+Lightweight design (does not interfere with gameplay)
+
+
+
+Requirements (Important):
+Before using this tool, please configure EZ2ON as follows:
+Use on the result screen
+Display mode: Borderless Fullscreen
+Resolution: 1920×1080
+Language: ENGLISH
+If these conditions are not met, OCR may not work correctly.
+
+
+
+How to Launch:
+Run main.exe
+The UI will appear at the bottom of the screen and run in the background
+
+
+
+Controls:
+On result screen:
+HOME key: Hold (~3 seconds) to start scanning
+When ranking in:
+↑ / ↓ : Change character
+← : Delete character
+→ : Confirm character
+ENTER : Register
+ESC : Cancel
+
+
+
+Tested Environment:
+Resolution: 1920×1080
+Display: Borderless Fullscreen
+OS: Windows 10
+
+
+
+CREDIT:
+System Design / Development: NITOROCK
+Observation Support AI: Tougetsu (ChatGPT)
+Sound: Kurage Kobo
+
+
+Records are logs for the future.
+And those logs become the walls you will surpass.
+
