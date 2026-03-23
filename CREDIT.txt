@@ -1,0 +1,78 @@
+記録装置設計・開発：ニトロック
+観測支援AI：灯月（ChatGPT）
+効果音：くらげ工房様
+
+C:\Users\user\Desktop\頂ーITADAKIー\EZ2ST>tree /f
+フォルダー パスの一覧
+ボリューム シリアル番号は C694-2E77 です
+C:.
+│  cmd.exe - ショートカット.lnk
+│  CREDIT.txt
+│  DB Browser for SQLite.exe - ショートカット.lnk
+│  ez2score.db
+│  main.py
+│  main起動.bat
+│  Screen copy起動バッチ.bat - ショートカット.lnk
+│  songs.db
+│  trs-million rg.ttf
+│
+├─assets
+│  ├─fonts
+│  │      trs-million rg.ttf
+│  │
+│  └─sounds
+│          beep.mp3
+│          click.mp3
+│
+├─config
+│  │  settings.py
+│  │  __init__.py
+│  │
+│  └─__pycache__
+│          settings.cpython-313.pyc
+│          __init__.cpython-313.pyc
+│
+├─core
+│  │  capture.py
+│  │  ocr.py
+│  │  scan.py
+│  │  scan_select.py
+│  │  __init__.py
+│  │
+│  └─__pycache__
+│          capture.cpython-313.pyc
+│          ocr.cpython-313.pyc
+│          scan.cpython-313.pyc
+│          scan_select.cpython-313.pyc
+│          __init__.cpython-313.pyc
+│
+├─legacy
+│      ez2st_test.py
+│      ez2st_test_backup_20260314.py
+│      ez2_ocr.py
+│
+├─score
+│  │  db.py
+│  │  songs_db.py
+│  │  __init__.py
+│  │
+│  └─__pycache__
+│          db.cpython-313.pyc
+│          songs_db.cpython-313.pyc
+│          __init__.cpython-313.pyc
+│
+├─tools
+│  │  mode_utils.py
+│  │  RGB.py
+│  │  sample.png
+│  │  __init__.py
+│  │
+│  └─__pycache__
+│          mode_utils.cpython-313.pyc
+│          __init__.cpython-313.pyc
+│
+└─ui
+    │  overlay.py
+    │
+    └─__pycache__
+            overlay.cpython-313.pyc
