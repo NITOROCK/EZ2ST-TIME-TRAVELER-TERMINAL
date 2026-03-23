@@ -7,7 +7,45 @@ import datetime
 
 os.makedirs("db", exist_ok=True)
 
+def init_db():
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS songs (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        song TEXT
+    )
+    """)
+
+    conn.commit()
+    conn.close()
+
+def init_score_db():
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS scores (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        song_id INTEGER,
+        key TEXT,
+        mode TEXT,
+        difficulty TEXT,
+        score INTEGER,
+        rate REAL,
+        combo INTEGER,
+        entry_name TEXT,
+        play_time TEXT
+    )
+    """)
+
+    conn.commit()
+    conn.close()
+
 DB_PATH = "db/ez2score.db"  # スコア管理用DB
+
+init_score_db()
 
 def backup_db():
     os.makedirs("backup", exist_ok=True)
@@ -77,7 +115,7 @@ def register_score(song_id, key, mode, difficulty, score, rate, combo, entry_nam
     """, (song_id, key, mode, difficulty, score))
 
     # 登録
-    play_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    play_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     cur.execute("""
         INSERT INTO scores (song_id, key, mode, difficulty, score, rate, combo, play_time, entry_name)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
