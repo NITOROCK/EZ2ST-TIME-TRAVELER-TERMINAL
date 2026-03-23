@@ -1,9 +1,23 @@
 # score/db.py
 import sqlite3
 from datetime import datetime
+import shutil
 import os
+import datetime
 
-DB_PATH = "ez2score.db"  # スコア管理用DB
+os.makedirs("db", exist_ok=True)
+
+DB_PATH = "db/ez2score.db"  # スコア管理用DB
+
+def backup_db():
+    os.makedirs("backup", exist_ok=True)
+
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    src = "db/ez2score.db"
+    dst = f"backup/ez2score_{timestamp}.db"
+
+    shutil.copy2(src, dst)
+    print(f"Backup created: {dst}")
 
 def find_same_score(song_id, key, mode, difficulty, score, rate, combo):
     conn = sqlite3.connect(DB_PATH)

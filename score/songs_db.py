@@ -1,7 +1,7 @@
 # songs_db.py
 import sqlite3
 
-DB_PATH = "songs.db"
+DB_PATH = "db/songs.db"
 
 def get_song_id(title):
     conn = sqlite3.connect(DB_PATH)
